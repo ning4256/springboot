@@ -1,8 +1,17 @@
 package com.ning4256.pojo;
 
+import org.springframework.beans.factory.annotation.Value;
+
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.stereotype.Component;
+
 import java.util.Date;
 
+@ConfigurationProperties(prefix = "emp")
 public class Emp {
+
     private Integer empno;
 
     private String ename;

@@ -8,14 +8,19 @@ import com.ning4256.dao.EmpDAO;
 import com.ning4256.pojo.Emp;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mybatis.logging.Logger;
+import org.mybatis.logging.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Import;
+import org.springframework.context.annotation.ImportResource;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+
 public class SpringbootApplicationTests {
 
     @Autowired
@@ -40,7 +45,12 @@ public class SpringbootApplicationTests {
         System.out.println("得到导航总页数:" + info.getNavigatePages());
         System.out.println("得到页面的行数:" + info.getPageSize());
         System.out.println("是否为首页:" + info.isIsFirstPage());
-
     }
+
+    @Test
+    public void test01(){
+        Logger logger = LoggerFactory.getLogger(getClass());
+    }
+
 
 }
